@@ -7,9 +7,4 @@
   </parent>
   <groupId>com.boot.insta.post</groupId>
   <artifactId>insta-post-service</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>post-client</module>
-  	<module>post-server</module>
-  </modules>
 </project>

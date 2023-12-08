@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<springProperty scope="context" name="LOG_DIRECTORY" source="log.file.path"/>
-	
+
 	<!-- console appender -->
 	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
 		<layout class="ch.qos.logback.classic.PatternLayout">
@@ -14,7 +14,7 @@
 	<!-- file appender -->
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${LOG_DIRECTORY}/insta-api-gateway.log</file>
+		<file>${LOG_DIRECTORY}/insta-user-account-service.log</file>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 			<pattern>
 				%d %p %C{1.} [%t] %m%n
@@ -23,10 +23,11 @@
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>
-				${LOG_DIRECTORY}/archived/insta-api-gateway-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-				<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-					<maxFileSize>5MB</maxFileSize>
-				</timeBasedFileNamingAndTriggeringPolicy>			
+				${LOG_DIRECTORY}/archived/insta-user-account-service-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>5MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 	</appender>
 
